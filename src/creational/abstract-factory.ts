@@ -1,43 +1,46 @@
-namespace AbstractFactory {
+/**
+ * Abstract Factory aka Kit
+ */
 
-    interface Product { }
+interface Product { }
 
-    abstract class ProductBar implements Product { }
-    abstract class ProductBaz implements Product { }
+abstract class ProductA implements Product { }
+abstract class ProductB implements Product { }
 
-    class ProductBarA extends ProductBar { }
-    class ProductBazA extends ProductBaz { }
+class ProductA1 extends ProductA { }
+class ProductB1 extends ProductB { }
 
-    class ProductBarB extends ProductBar { }
-    class ProductBazB extends ProductBaz { }
+class ProductA2 extends ProductA { }
+class ProductB2 extends ProductB { }
 
-    abstract class Factory {
-        createProductBar() { }
-        createProductBaz() { }
-    }
-
-    class FactoryA extends Factory {
-        createProductBar() {
-            return new ProductBarA();
-        }
-        createProductBaz() {
-            return new ProductBazA();
-        }
-    }
-
-    class FactoryB extends Factory {
-        createProductBar() {
-            return new ProductBarB();
-        }
-        createProductBaz() {
-            return new ProductBazB();
-        }
-    }
-
-    class Client {
-        factory: Factory;
-        constructor() {
-            this.factory = new FactoryA();
-        }
-    }
+export abstract class AbstractFactory {
+  createProductA() { }
+  createProductB() { }
 }
+
+// Usually ConcreteFactory implementing as Singleton
+class ConcreteFactory1 extends AbstractFactory {
+  createProductA() {
+    return new ProductA1();
+  }
+  createProductB() {
+    return new ProductB1();
+  }
+}
+
+class ConcreteFactory2 extends AbstractFactory {
+  createProductA() {
+    return new ProductA2();
+  }
+  createProductB() {
+    return new ProductB2();
+  }
+}
+
+class Client {
+  factory: AbstractFactory;
+  constructor() {
+    this.factory = new ConcreteFactory1();
+  }
+}
+
