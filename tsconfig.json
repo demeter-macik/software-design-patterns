@@ -13,5 +13,9 @@
     "exclude": [
         "node_modules",
         "**/*.spec.ts"
-    ]
+    ],
+    "rules": {
+      "indent": ["warn", 2],
+      "padded-blocks": "off"      
+  }
 }
