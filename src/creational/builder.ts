@@ -39,6 +39,7 @@ export class ConcreteBuilder2 extends Builder {
 
 export class Client {
   public createProduct(builder: Builder) {
+    builder.createProduct();
     builder.build(1);
     builder.build(2);
     builder.build(3);
