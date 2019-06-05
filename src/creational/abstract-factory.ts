@@ -14,33 +14,36 @@ class ProductA2 extends ProductA { }
 class ProductB2 extends ProductB { }
 
 export abstract class AbstractFactory {
-  createProductA() { }
-  createProductB() { }
+  public createProductA(): ProductA {
+    return;
+  }
+  public createProductB(): ProductB {
+    return;
+  }
 }
 
 // Usually ConcreteFactory implementing as Singleton
-class ConcreteFactory1 extends AbstractFactory {
-  createProductA() {
+export class ConcreteFactory1 extends AbstractFactory {
+  public createProductA(): ProductA {
     return new ProductA1();
   }
-  createProductB() {
+  public createProductB(): ProductB {
     return new ProductB1();
   }
 }
 
-class ConcreteFactory2 extends AbstractFactory {
-  createProductA() {
+export class ConcreteFactory2 extends AbstractFactory {
+  public createProductA(): ProductA {
     return new ProductA2();
   }
-  createProductB() {
+  public createProductB(): ProductB {
     return new ProductB2();
   }
 }
 
-class Client {
-  factory: AbstractFactory;
-  constructor() {
+export class Client {
+  private factory: AbstractFactory;
+  public constructor() {
     this.factory = new ConcreteFactory1();
   }
 }
-

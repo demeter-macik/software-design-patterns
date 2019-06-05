@@ -1,42 +1,27 @@
-namespace Factory {
+enum ProductTypes { A, B };
 
-    enum ProductTypes { Bar, Baz };
+interface Product { }
 
-    interface Product {
-        name: string
+class ProductA implements Product { }
+
+class ProductB implements Product { }
+
+export class Factory {
+  public createProduct(type: ProductTypes): Product {
+    switch (type) {
+      case ProductTypes.A:
+        return new ProductA();
+      case ProductTypes.B:
+        return new ProductB();
+      default:
+        throw new Error('Can\'t create product');
     }
+  }
+}
 
-    class ProductBar implements Product {
-        name: string;
-        constructor() {
-            this.name = 'Bar';
-        }
-    }
-
-    class ProductBaz implements Product {
-        name: string;
-        constructor() {
-            this.name = 'Baz';
-        }
-    }
-
-    class Factory {
-        createProduct(type: ProductTypes): Product {
-            switch (type) {
-                case ProductTypes.Bar:
-                    return new ProductBar();
-                case ProductTypes.Baz:
-                    return new ProductBaz();
-                default:
-                    throw new Error('Can\'t create product');
-            }
-        }
-    }
-
-    class Client {
-        product: Product;
-        constructor(type: ProductTypes, factory: Factory) {
-            this.product = factory.createProduct(type);
-        }
-    }
+export class Client {
+  private product: Product;
+  public constructor(type: ProductTypes, factory: Factory) {
+    this.product = factory.createProduct(type);
+  }
 }

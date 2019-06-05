@@ -1,43 +1,27 @@
-namespace AbstractFactory {
+interface Product { }
 
-    interface Product {
-        name: string
-    }
+class ProductA implements Product { }
+class ProductB implements Product { }
 
-    class ProductBar implements Product {
-        name: string;
-        constructor() {
-            this.name = 'Bar';
-        }
-    }
+class FactoryMethod {
+  public doSomethingWithProduct(): void {
+    this.factoryMethod();
+  }
+  public factoryMethod(): Product {
+    return new ProductA();
+  }
+}
 
-    class ProductBaz implements Product {
-        name: string;
-        constructor() {
-            this.name = 'Baz';
-        }
-    }
+class ConcreteFactory extends FactoryMethod {
+  public factoryMethod(): Product {
+    // you have more control on how product is creating
+    return new ProductB();
+  }
+}
 
-    class Factory {
-        doSomethingWithProduct(){
-            const product = this.factoryMethod();
-        }
-        factoryMethod() {
-            return new ProductBar();
-        }
-    }
-
-    class ConcreteFactory extends Factory {
-        factoryMethod() {
-            // you have more control on how product is creating
-            return new ProductBaz();
-        }
-    }    
-
-    class Client {
-        factory: Factory;
-        constructor() {
-            this.factory = new ConcreteFactory();            
-        }
-    }
+export class Client {
+  private factory: FactoryMethod;
+  public constructor() {
+    this.factory = new ConcreteFactory();
+  }
 }
