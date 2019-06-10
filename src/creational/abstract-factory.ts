@@ -1,7 +1,6 @@
 /**
  * Abstract Factory aka Kit
  */
-
 interface Product { }
 
 abstract class ProductA implements Product { }

@@ -1,6 +1,9 @@
+/**
+ * Builder
+ */
 export class Product {
-  public append(part: any) { }
-  public prepend(part: any) { }
+  public append() { }
+  public prepend() { }
 }
 
 abstract class Builder {
@@ -8,7 +11,7 @@ abstract class Builder {
   public getProduct(): Product {
     return;
   }
-  public build(part: any) { }
+  public build() { }
 }
 
 export class ConcreteBuilder1 extends Builder {
@@ -19,8 +22,8 @@ export class ConcreteBuilder1 extends Builder {
   public getProduct(): Product {
     return this.product;
   }
-  public build(part: any) {
-    this.product.append(part);
+  public build() {
+    this.product.append();
   }
 }
 
@@ -32,17 +35,17 @@ export class ConcreteBuilder2 extends Builder {
   public getProduct(): Product {
     return this.product;
   }
-  public build(part: any) {
-    this.product.prepend(part);
+  public build() {
+    this.product.prepend();
   }
 }
 
-export class Client {
+export class Director {
   public createProduct(builder: Builder) {
     builder.createProduct();
-    builder.build(1);
-    builder.build(2);
-    builder.build(3);
+    builder.build();
+    builder.build();
+    builder.build();
     return builder.getProduct();
   }
 }
