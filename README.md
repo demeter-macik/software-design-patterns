@@ -20,5 +20,6 @@
 - [Memento](./src/behavioral/memento.ts)
 - [Observer](./src/behavioral/observer.ts)
 - [Strategy](./src/behavioral/strategy.ts)
+- [Template method](./src/behavioral/template-method.ts)
 
 ## Structural
