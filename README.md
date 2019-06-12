@@ -18,5 +18,6 @@
 - [Iterator](./src/behavioral/iterator.ts)
 - [Mediator](./src/behavioral/mediator.ts)
 - [Memento](./src/behavioral/memento.ts)
+- [Observer](./src/behavioral/observer.ts)
 
 ## Structural

@@ -34,7 +34,7 @@ export class ConnectionPool {
    */
   public release(connection: Connection): void {
     // remove from `inUse` array
-    this.inUse = this.inUse.filter((conn): boolean => { return conn !== connection });
+    this.inUse = this.inUse.filter(conn => conn !== connection);
     // add to `available` array
     this.available.push(connection);
   }
