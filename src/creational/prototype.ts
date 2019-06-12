@@ -1,30 +1,33 @@
 /**
  * Prototype
  */
-interface Prototype {
+
+export interface Prototype {
   clone(): Prototype;
 }
 
-abstract class Product implements Prototype {
-  public clone(): Product { }
+export abstract class Product implements Prototype {
+  public clone(): Product {
+    return;
+  }
 }
 
-class ConcreteProductA extends Product {
+export class ConcreteProductA extends Product {
   public clone(): Product {
     // do clone product instance
     return;
   }
 }
 
-class ConcreteProductB extends Product {
+export class ConcreteProductB extends Product {
   public clone(): Product {
     // do clone product instance
     return;
   }
 }
 
-class Products {
-  private products: any = {};
+export class Products {
+  private products = {};
   public constructor() {
     this.addProduct('A', new ConcreteProductA());
     this.addProduct('B', new ConcreteProductB());
@@ -37,7 +40,7 @@ class Products {
   }
 }
 
-class Client {
+export class Client {
 
   private products: Products;
 

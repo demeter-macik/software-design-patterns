@@ -1,6 +1,6 @@
 /**
  * Command
- * Examples: switch, calculator commands, placing orders
+ * Usage: switch, calculator commands, placing orders
  */
 
 interface Command {

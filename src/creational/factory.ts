@@ -1,6 +1,7 @@
 /**
  * Factory
  */
+
 enum ProductTypes { A, B };
 
 interface Product { }

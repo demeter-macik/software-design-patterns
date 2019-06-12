@@ -14,5 +14,9 @@
 
 - [Chain of responsibility](./src/behavioral/chain-of-responsibility.ts)
 - [Command](./src/behavioral/command.ts)
+- [Interpreter](./src/behavioral/interpreter.ts)
+- [Iterator](./src/behavioral/iterator.ts)
+- [Mediator](./src/behavioral/mediator.ts)
+- [Memento](./src/behavioral/memento.ts)
 
 ## Structural

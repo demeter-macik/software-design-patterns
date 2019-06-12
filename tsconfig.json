@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "commonjs",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
         "outFile": "./build/index.js",
         "sourceMap": true,
-        "lib": ["es5", "es6"]
+        "lib": ["es6", "dom"],
+        "target": "es6"
     },
     "include": [
         "src/**/*"

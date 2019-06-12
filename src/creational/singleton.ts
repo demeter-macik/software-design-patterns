@@ -1,6 +1,7 @@
 /**
  * Singleton
  */
+
 class ProductBar { }
 
 export class Singleton {

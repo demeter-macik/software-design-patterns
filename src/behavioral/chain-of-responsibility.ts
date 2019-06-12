@@ -1,6 +1,6 @@
 /**
  * Chain of responsibility
- * Good example - Logger
+ * Usage: logger
  */
 
 export class Request {

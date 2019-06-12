@@ -1,6 +1,7 @@
 /**
  * Factory method aka Virtual Constructor
  */
+
 interface Product { }
 
 class ProductA implements Product { }
