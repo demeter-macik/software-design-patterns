@@ -27,16 +27,13 @@ export class ConcreteProductB extends Product {
 }
 
 export class Products {
-  private products = {};
+  private products: Map<string, Product>;
   public constructor() {
-    this.addProduct('A', new ConcreteProductA());
-    this.addProduct('B', new ConcreteProductB());
-  }
-  public addProduct(name: string, product: Product): void {
-    this.products[name] = product;
+    this.products.set('A', new ConcreteProductA());
+    this.products.set('B', new ConcreteProductB());
   }
   public getProduct(name: string): Product | undefined {
-    return this.products[name];
+    return this.products.get(name);
   }
 }
 
