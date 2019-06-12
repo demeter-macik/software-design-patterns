@@ -37,6 +37,7 @@ export class Context {
 }
 
 export abstract class Expression {
+  /* eslint "@typescript-eslint/no-unused-vars": "off" */
   public interpret(context: Context): void { }
 }
 
