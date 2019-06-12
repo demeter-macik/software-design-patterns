@@ -34,6 +34,7 @@ export class ConnectionPool {
    */
   public release(connection: Connection): void {
     // remove from `inUse` array
+    /* eslint "@typescript-eslint/explicit-function-return-type": "off" */
     this.inUse = this.inUse.filter(conn => conn !== connection);
     // add to `available` array
     this.available.push(connection);

@@ -19,5 +19,6 @@
 - [Mediator](./src/behavioral/mediator.ts)
 - [Memento](./src/behavioral/memento.ts)
 - [Observer](./src/behavioral/observer.ts)
+- [Strategy](./src/behavioral/strategy.ts)
 
 ## Structural

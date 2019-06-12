@@ -22,6 +22,7 @@ export class Subject {
     this.subscribers.delete(observer);
   }
   public notify(message: string): void {
+    /* eslint "@typescript-eslint/explicit-function-return-type": "off" */
     this.subscribers.forEach(subscriber => subscriber.update(message));
   }
 }
