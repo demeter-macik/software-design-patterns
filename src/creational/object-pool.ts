@@ -1,6 +1,6 @@
 /**
  * Object pool
- * In other languages this pattern should be implemented in thread-safe manner
+ * Usage: to avoid expensive obtaining and releasing objects by recycling objects.
  */
 
 export interface Connection { }

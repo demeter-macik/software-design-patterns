@@ -1,8 +1,9 @@
-/* eslint "@typescript-eslint/no-explicit-any": "off" */
 /**
  * Iterator
- * Usage: access content of a collection
+ * Usage: provide the way to access the elements of the sequence and hiding internal representation.
  */
+
+/* eslint "@typescript-eslint/no-explicit-any": "off" */
 
 export interface Iterable {
   next(): any;

@@ -1,6 +1,6 @@
 /**
  * Mediator
- * Usage: to avoid tight coupling between interacting objects
+ * Usage: define an object that encapsulate how set of objects interact.
  */
 
 export interface Colleague {

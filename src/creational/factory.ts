@@ -1,5 +1,6 @@
 /**
  * Factory
+ * Usage: hide instantiation logic from client
  */
 
 enum ProductTypes { A, B };

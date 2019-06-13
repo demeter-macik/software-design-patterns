@@ -1,5 +1,6 @@
 /**
  * Singleton
+ * Usage: if exactly one object is needed to coordinate actions across the system.
  */
 
 class ProductBar { }

@@ -1,5 +1,7 @@
 /**
  * Factory method aka Virtual Constructor
+ * Usage: defines interface for creating new objects, grant more control on instantiation process
+ * to subclasses.
  */
 
 interface Product { }

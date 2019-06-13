@@ -1,6 +1,7 @@
 /**
  * Observer aka Publisher/Subscriber
- * Usage: event handling system
+ * Usage: creates one-to-many dependency between objects.
+ * Example: event handling system
  */
 
 export interface Observer {

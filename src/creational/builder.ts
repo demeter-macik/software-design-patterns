@@ -1,5 +1,6 @@
 /**
  * Builder
+ * Usage: separate construction of complex object from its representation.
  */
 
 export class Product {
@@ -25,6 +26,9 @@ export class ConcreteBuilder1 extends Builder {
   }
   public build(): void {
     this.product.append();
+    this.product.append();
+    this.product.append();
+    this.product.prepend();
   }
 }
 
@@ -44,8 +48,6 @@ export class ConcreteBuilder2 extends Builder {
 export class Director {
   public createProduct(builder: Builder): Product {
     builder.createProduct();
-    builder.build();
-    builder.build();
     builder.build();
     return builder.getProduct();
   }

@@ -1,6 +1,6 @@
 /**
  * Strategy
- * Usage: to separate algorithms from classes
+ * Usage: isolate algorithm in the separate classes from classes
  */
 
 export interface Strategy {

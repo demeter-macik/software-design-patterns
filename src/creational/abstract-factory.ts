@@ -1,5 +1,7 @@
 /**
  * Abstract Factory aka Kit
+ * Usage: provide interface for creating families of related objects without specifying concrete 
+ * classes.
  */
 
 interface Product { }

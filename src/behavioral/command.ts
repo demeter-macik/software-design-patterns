@@ -1,6 +1,6 @@
 /**
  * Command
- * Usage: switch, calculator commands, placing orders
+ * Usage: encapsulate request in object
  */
 
 interface Command {

@@ -1,5 +1,6 @@
 /**
  * Prototype
+ * Usage: to avoid the inherent cost of creating of a new object.
  */
 
 export interface Prototype {
@@ -27,13 +28,16 @@ export class ConcreteProductB extends Product {
 }
 
 export class Products {
-  private products: Map<string, Product>;
+  private products = {};
   public constructor() {
-    this.products.set('A', new ConcreteProductA());
-    this.products.set('B', new ConcreteProductB());
+    this.addProduct('A', new ConcreteProductA());
+    this.addProduct('B', new ConcreteProductB());
+  }
+  public addProduct(name: string, product: Product): void {
+    this.products[name] = product;
   }
   public getProduct(name: string): Product | undefined {
-    return this.products.get(name);
+    return this.products[name];
   }
 }
 
