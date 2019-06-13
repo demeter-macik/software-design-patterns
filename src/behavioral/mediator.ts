@@ -30,11 +30,11 @@ export class Mediator {
 
   public doSomething1(): void {
     this.a.send();
-    this.a.receive();
+    this.b.receive();
   }
 
   public doSomething2(): void {
     this.a.receive();
-    this.a.send();
+    this.b.send();
   }
 }
