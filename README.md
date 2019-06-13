@@ -31,7 +31,3 @@
 - [Facade](./src/structural/facade.ts)
 - [Flyweight](./src/structural/flyweight.ts)
 - [Proxy](./src/structural/proxy.ts)
-
-## Architectural
-
-- [Proxy](./src/structural/proxy.ts)
