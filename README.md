@@ -19,7 +19,19 @@
 - [Mediator](./src/behavioral/mediator.ts)
 - [Memento](./src/behavioral/memento.ts)
 - [Observer](./src/behavioral/observer.ts)
-- [Strategy](./src/behavioral/strategy.ts)
-- [Template method](./src/behavioral/template-method.ts)
+- [Visitor](./src/behavioral/visitor.ts)
+- [Null object](./src/behavioral/null-object.ts)
 
 ## Structural
+
+- [Adapter](./src/structural/adapter.ts)
+- [Bridge](./src/structural/bridge.ts)
+- [Composite](./src/structural/composite.ts)
+- [Decorator](./src/structural/decorator.ts)
+- [Facade](./src/structural/facade.ts)
+- [Flyweight](./src/structural/flyweight.ts)
+- [Proxy](./src/structural/proxy.ts)
+
+## Architectural
+
+- [Proxy](./src/structural/proxy.ts)
